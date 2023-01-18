@@ -1,0 +1,2 @@
+The `quotonic.fock` module includes functions required to generate a list of states that together define the Fock basis for a provided number of photons $n$ and number of optical modes $m$.
+::: quotonic.fock.getDim

@@ -1,17 +1,19 @@
 site_name: quotonic-public
 repo_url: https://github.com/jewaniuk/quotonic-public
-site_url: https://jewaniuk.github.io/quotonic-public
+site_url: ""
 site_description: A platform for performing efficient simulations in the quantum photonic domain.
 site_author: Jacob Ewaniuk
 edit_uri: edit/main/docs/
 repo_name: jewaniuk/quotonic-public
-copyright: Maintained by <a href="https://jewaniuk.com">Florian</a>.
+copyright: Maintained by <a href="https://jewaniuk.com">Jacob Ewaniuk</a>.
 
 nav:
   - Home: index.md
-  - Modules: modules.md
+  - Fock: fock.md
+  - Clements: clements.md
+  - AA: aa.md
+
 plugins:
-  - search
   - mkdocstrings:
       handlers:
         python:
@@ -52,3 +54,7 @@ markdown_extensions:
       permalink: true
   - pymdownx.arithmatex:
       generic: true
+
+extra_javascript:
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js

@@ -9,9 +9,12 @@ readme = "README.md"
 packages = [
   {include = "quotonic"}
 ]
+build = "build.py"
 
 [tool.poetry.dependencies]
 python = ">=3.8,<4.0"
+numpy = "^1.24.1"
+cython = "^0.29.33"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^7.2.0"
@@ -26,7 +29,7 @@ mkdocs-material = "^8.5.10"
 mkdocstrings = {extras = ["python"], version = "^0.19.0"}
 
 [build-system]
-requires = ["poetry-core>=1.0.0"]
+requires = ["poetry-core>=1.0.0", "setuptools", "numpy", "cython"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.black]
