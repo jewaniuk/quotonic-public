@@ -1,0 +1,50 @@
+[tool.poetry]
+name = "quotonic"
+version = "0.0.1"
+description = "A platform for performing efficient simulations in the quantum photonic domain."
+authors = ["Jacob Ewaniuk <fjacob.ewaniuk@queensu.ca>"]
+repository = "https://github.com/jewaniuk/quotonic-public"
+documentation = "https://jewaniuk.github.io/quotonic-public/"
+readme = "README.md"
+packages = [
+  {include = "quotonic"}
+]
+
+[tool.poetry.dependencies]
+python = ">=3.8,<4.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.2.0"
+deptry = "^0.6.4"
+mypy = "^0.981"
+pre-commit = "^2.20.0"
+tox = "^3.25.1"
+
+[tool.poetry.group.docs.dependencies]
+mkdocs = "^1.4.2"
+mkdocs-material = "^8.5.10"
+mkdocstrings = {extras = ["python"], version = "^0.19.0"}
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 120
+target-version = ['py37']
+preview = true
+
+[tool.isort]
+profile = "black"
+
+[tool.mypy]
+files = ["quotonic"]
+disallow_untyped_defs = "True"
+disallow_any_unimported = "True"
+no_implicit_optional = "True"
+check_untyped_defs = "True"
+warn_return_any = "True"
+warn_unused_ignores = "True"
+show_error_codes = "True"
+
+
