@@ -10,7 +10,7 @@ class memoized:
     (not reevaluated)."""
 
     def __init__(self, func):
-        self.func = func
+        self.func = self.__wrapped__ = func
         self.cache = {}
 
     def __call__(self, *args):
